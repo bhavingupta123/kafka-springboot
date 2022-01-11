@@ -19,4 +19,11 @@ public class Controller {
         this.kafkaTemplate.send(topic,msg);
         return "published";
     }
+
+    @GetMapping("/destroy")
+    public String des(){
+        this.kafkaTemplate.destroy();
+        System.out.println("destroyed");
+        return "destroyed";
+    }
 }
