@@ -20,10 +20,4 @@ public class Controller {
         return "published";
     }
 
-    @GetMapping("/destroy")
-    public String des(){
-        this.kafkaTemplate.destroy();
-        System.out.println("destroyed");
-        return "destroyed";
-    }
 }
