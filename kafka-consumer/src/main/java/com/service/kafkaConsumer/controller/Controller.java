@@ -12,12 +12,12 @@ public class Controller {
     @Autowired
     KafkaTemplate<String,String> kafkaTemplate ;
 
-    private static final String topic="topic2";
+    private static final String topic="topic1";
 
     @GetMapping("/publish2/{msg}")
     public String publicMsg(@PathVariable("msg") String msg){
         this.kafkaTemplate.send(topic,msg);
-        return "published2";
+        return "published2:" + topic;
     }
 
 }

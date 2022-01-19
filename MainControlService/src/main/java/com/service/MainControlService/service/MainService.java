@@ -24,6 +24,7 @@ public class MainService {
     @RequestMapping("/publish2/{msg}")
     public String publish2(@PathVariable("msg") String msg){
 
+        System.out.println("here2");
         String res2 = restTemplate.getForObject("http://localhost:8082/publish2/" + msg,String.class);
         return res2;
     }

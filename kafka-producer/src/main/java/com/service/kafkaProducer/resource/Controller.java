@@ -17,6 +17,6 @@ public class Controller {
     @GetMapping("/publish/{msg}")
     public String publicMsg(@PathVariable("msg") String msg){
         this.kafkaTemplate.send(topic,msg);
-        return "published";
+        return "published to :" + topic;
     }
 }
