@@ -11,8 +11,6 @@ public class Consumer {
 
     @KafkaListener(topics = "topic2",groupId = "group2")
     public void consumeTopic(String msg){
-
-        System.out.println("f 1");
         connector = new Connector();
         connector.storeData(msg);
         System.out.println("consumed2:" + msg);
