@@ -31,7 +31,7 @@ public class Connector {
             makeConnection();
             System.out.println("in store data method 1:" + msg);
             Statement stmt=con.createStatement();
-            stmt.executeUpdate("INSERT INTO service1 (data) VALUES ('"+msg+"') ");
+            stmt.executeUpdate("INSERT INTO service1 (data) VALUES ('"+msg+"') "); // store data in service1 table
             System.out.println("Done");
             con.close();
         }
